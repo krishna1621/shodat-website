@@ -1,0 +1,50 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+.mobile-menu {
+  z-index: 1;
+  transition: 0.5s;
+  margin-top: 30px;
+  justify-content: flex-end;
+  position: fixed;
+  top: 20;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+}
+
+#mobile-icon {
+  position: absolute;
+  right: -25rem;
+  top: 2rem;
+}
+
+.fa-xmark {
+  position: absolute;
+  margin-left: 5%;
+  left: 20rem;
+}
+.mobile-menu.active {
+  left: 0;
+}
+.mobile-menu ul li ul {
+  display: none;
+}
+.mobile-menu ul li:hover ul {
+  display: block;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 2000px;
+}
