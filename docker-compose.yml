@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  shodat-node:
+    build:
+      context: .
+      dockerfile: control.Dockerfile
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+  mysql:
+     image: mysql:latest
+     container_name: mysql-slave
+     environment:
+      - MYSQL_USER: clarit
+      - MYSQL_ROOT_PASSWORD: clarit@123
+      - MYSQL_DATABASE: shodat
+     ports:
+       - "3306:3306"
+     volumes:
+       - mysql_slave:/var/lib/mysql
+     networks:
+       - mysql
+volumes:
+  mysql_slave:
+    driver: local
+networks:
+   mysql:
+     driver: bridge
