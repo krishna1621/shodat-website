@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Ensure this matches the outDir in your Vite config
+          path: 'dist' # Ensure this matches the outDir in your Vite config
 
   deploy:
     environment:
