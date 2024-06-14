@@ -3,8 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
+  "homepage": "https://github.com/krishna1621/shodat-website.git",
   "scripts": {
-    "dev": "concurrently \"node src/backend/Mailer.js\" \"vite\"",
+    "dev": "\"vite --host\"",
+    "predeploy": "npm run build",
+    "deploy": "shodat -d build",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
