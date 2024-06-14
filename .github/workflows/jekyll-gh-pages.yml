@@ -28,7 +28,7 @@ jobs:
           node-version: '16' # Ensure the Node.js version is compatible with Vite
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Vite Project
         run: npm run build
