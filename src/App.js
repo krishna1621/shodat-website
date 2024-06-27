@@ -7,7 +7,6 @@ import SolutionAi from "./Components/SolutionAI/SolutionAi";
 import ShodatAI from "./Components/ShodatAI/ShodatAI";
 import About from "./Components/About/About";
 import Navbar from "./Components/Navbar1/Navbar";
-import FinalFooter from "./Components/Footer/FinalFooter";
 import ScrollToTop from "../ScrollToTop";
 
 function App() {
